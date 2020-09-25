@@ -129,9 +129,100 @@ const person = {
 
 
 // ------- Array.map method --------
-// ------- Variables --------
-// ------- Variables --------
-// ------- Variables --------
+
+// const colors = ['red', 'green', 'blue'];
+//  // we want to have a list of all the colours in the array, so we need a callback function
+// // we need to pass a callback function by the map method. the job of this function is to transorm each element in the above array
+// // the map method returns a new array and it doesn't modify the original array
+//  const items = colors.map(function(color) {
+//      return '<li>' + color + '</li>';
+//  });
+
+//  // the above function written as an arrow function
+//  const items = colors.map(color => '<li>' + color + '</li>');
+
+//  // the above by using a template literal
+//  const items = colors.map(color => `<li>+ ${color} </li>`)
+
+
+// ------- Οbject destructuring --------
+// const address = {
+//     street: '',
+//     city: '',
+//     country: ''
+// };
+
+// //we need to extract the values of these properties and store them in separate variables. We would do this:
+// const street = address.street;
+// const city = address.city;
+// const country = address.country;
+
+// // the above without writing repetitive code:
+// const { street, city, country } = address; // { name of the target properties } and set it to the address object
+
+// // in case you need to target only one property
+// const { street } = address;
+
+// // in case you wanted to call this constant by a different name, eg st. we use an alias
+// const { street: st } = address;
+
+
+// ------- Spread Operator --------
+// const first = [1, 2, 3];
+// const second = [4, 5, 6];
+
+// const combined = first.concat(second);
+
+// but if we wanted to use the spread operator we would write this:
+// const combined = [...first, ...second];
+
+
+// if we wante dto add values within the combined arrays
+// const combined = [...first, 'a', ...second, 'b'];
+// console.log(combined)
+
+// how to clone an array using the spread operator
+// const clone = [...first];
+// console.log(clone);
+
+// const first = { name: 'Mosh' };
+// const second = { job: 'instructor' };
+// const combined = {...first, ...second, country: 'Australia'};
+// console.log(combined);
+
+// const clone = {...first};
+// console.log(clone);
+
+// ------- Classes --------
+// const person = {
+//     name: "Mosh",
+//     walk() {
+//         console.log('walk');
+//     }
+// };
+
+// const person2 = {
+//     name: "Mosh",
+//     walk() {
+//         console.log('walk');
+//     }
+// };
+
+// in the above case we have duplicated the implementation of the walk method. If there is a bug in a real life application then we have a problem. In this case, we need a blueprint to create objects of that type. We use classes
+
+// class Person {
+//     constructor(name) {
+//         this.name = name;
+//     }
+//     walk() {
+//         console.log('walk');
+//     }
+// }
+
+// const person = new Person('Mosh');
+// person.walk();
+
+
 // ------- Variables --------
 // ------- Variables --------
 // ------- Variables --------
